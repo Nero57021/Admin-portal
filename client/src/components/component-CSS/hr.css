@@ -1,0 +1,11 @@
+.hr {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(211, 202, 202, 0.185)), url("https://www.peopleworks.in/wp-content/uploads/2013/09/what-makes-human-resource-managemnt-system.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 350px;
+}

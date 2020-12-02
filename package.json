@@ -1,0 +1,35 @@
+{
+  "name": "se_project",
+  "version": "1",
+  "description": "Backend Folder containing all things needed for backend functionality",
+  "main": "server.js",
+  "scripts": {
+    "build": "cd client && yarn run build",
+    "install-client": "cd client && yarn install",
+    "heroku-postbuild":"yarn run install-client && yarn run build",
+    "start": "nodemon server.js"
+  },
+  "repository": "https://github.com/chant17/SE-Team7",
+  "author": "Jeremy bayangos, Chantha Mak, Muhammad Abbas",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "argon2": "^0.27.0",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "cookieparser": "^0.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validation": "^3.0.6",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.0",
+    "session": "^0.1.0"
+  }
+}
