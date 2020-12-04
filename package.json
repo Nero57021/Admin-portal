@@ -4,7 +4,6 @@
   "description": "Backend Folder containing all things needed for backend functionality",
   "main": "server.js",
   "scripts": {
-    "build": "cd client && yarn run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn build --prefix client",
     "start": "node server.js"
   },
