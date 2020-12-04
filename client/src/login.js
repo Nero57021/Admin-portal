@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div>
-      <Route path="/login" exact component={login} />
+      <Route path="/" exact component={login} />
       <Route path="/HR" component={HR} />
       <Route path="/SupportAdmin" component={Support} />
       <Route path="/Finance" component={Finance} />

@@ -26,7 +26,7 @@ export default class Navbar extends Component {
               </Link>
             </li>
             <li className="navbar-item">
-              <Link onClick={event => window.location.href="/login"} className="nav-link">Logout</Link>
+              <Link onClick={event => window.location.href="/"} className="nav-link">Logout</Link>
             </li>
           </ul>
         </div>

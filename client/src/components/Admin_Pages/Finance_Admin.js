@@ -22,7 +22,7 @@ function Finance() {
                     </div>
                 </div>
                 <div className="navbar-item d-flex justify-content-center">
-                    <Button variant="danger" onClick={event => window.location.href="/login"}>Logout</Button>{' '}
+                    <Button variant="danger" onClick={event => window.location.href="/"}>Logout</Button>{' '}
                 </div>
   </div>
   );
