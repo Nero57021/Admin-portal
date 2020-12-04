@@ -10,7 +10,6 @@ const connectMongo = require("connect-mongo");
 const session = require("express-session");
 
 const rolesRouter = require("./routes/role");
-const usersRouter = require("./routes/users");
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
@@ -42,12 +41,11 @@ app.use(
 );
 
 app.use("/role", rolesRouter);
-app.use("/users", usersRouter);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(join(__dirname, "./client/build")));
+  app.use(express.static(join(__dirname, "client/build")));
   app.get("*", (req, res) => {
-    res.sendFile(resolve(__dirname, "./client/build", "index.html"));
+    res.sendFile(resolve(__dirname, "client/build", "index.html"));
   });
 }
 
