@@ -39,7 +39,7 @@ export default class login extends Component {
     };
 
     axios
-      .post("http://localhost:5000/users/login/", user) //This is where it post to the endpoint
+      .post("/api/users/login/", user) //This is where it post to the endpoint
       .then((res) => {
         this.setState({
           success: res.data.success,

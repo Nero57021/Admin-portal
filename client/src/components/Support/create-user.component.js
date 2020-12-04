@@ -44,7 +44,7 @@ export default class CreateUser extends Component {
     console.log(user);
 
     axios
-      .post("http://localhost:5000/role/add", user) //This is where it post to the endpoint
+      .post("api/role/add", user) //This is where it post to the endpoint
       .then((res) => console.log(res.data));
 
     this.setState({
@@ -92,7 +92,12 @@ export default class CreateUser extends Component {
             /> */}
 
             <div class="input-group mb-3">
-              <select class="custom-select" onChange={this.onChangeadmin_role} value={this.state.admin_role} id="inputGroupSelect01">
+              <select
+                class="custom-select"
+                onChange={this.onChangeadmin_role}
+                value={this.state.admin_role}
+                id="inputGroupSelect01"
+              >
                 <option value="">Choose an admin role</option>
                 <option value="HR">HR</option>
                 <option value="SupportAdmin">Support Admin</option>

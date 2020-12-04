@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { render } from "react-dom";
 
-const UserRole = (
-  props
-) => (
+const UserRole = (props) => (
   <tr>
     <td>{props.roles.username}</td>
     <td>{props.roles.admin_role}</td>
@@ -29,7 +27,7 @@ const FetcherList = () => {
     console.log("TEST");
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/role/");
+        const { data } = await axios.get("/api/role/");
         setValue(data);
       } catch (e) {
         console.log(e);
@@ -51,7 +49,7 @@ const FetcherList = () => {
     });
   };
   const deleteroles = (id) => {
-    axios.delete("http://localhost:5000/role/" + id).then((response) => {
+    axios.delete("/api/role/" + id).then((response) => {
       console.log(response.data);
     });
 
