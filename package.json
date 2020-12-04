@@ -7,7 +7,7 @@
     "build": "cd client && yarn run build",
     "install-client": "cd client && yarn install",
     "heroku-postbuild":"yarn run install-client && yarn run build",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": "https://github.com/chant17/SE-Team7",
   "author": "Jeremy bayangos, Chantha Mak, Muhammad Abbas",
