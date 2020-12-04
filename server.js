@@ -43,9 +43,9 @@ app.use(
 app.use("/role", rolesRouter);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(join(__dirname, "client/build")));
+  app.use(express.static(join(__dirname, "./client/build")));
   app.get("*", (req, res) => {
-    res.sendFile(resolve(__dirname, "client/build", "index.html"));
+    res.sendFile(resolve(__dirname, "./client/build", "index.html"));
   });
 }
 
