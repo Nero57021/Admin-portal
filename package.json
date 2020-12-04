@@ -1,6 +1,6 @@
 {
   "name": "se_project",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Backend Folder containing all things needed for backend functionality",
   "main": "server.js",
   "scripts": {
