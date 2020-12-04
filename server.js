@@ -26,27 +26,27 @@ app.use(cors());
 app.use(express.json());
 
 // Middleware and stuff
-app.use(morgan('dev'));
-app.use(session({
-  name: 'cookie',
-  secret: process.env.SECRET_KEY,
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 4,
-    sameSite: true,
+app.use(morgan("dev"));
+app.use(
+  session({
+    name: "cookie",
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 4,
+      sameSite: true,
+    },
+  })
+);
 
-  }
-}));
+app.use("/role", rolesRouter);
+app.use("/users", usersRouter);
 
-app.use('/role', rolesRouter);
-app.use('/users', usersRouter);
-
-if(process.env.NODE_ENV ==='production')
-{
-  app.use(express.static('/client/build'));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("./client/build"));
 }
 
 app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
+  console.log(`Server is running on port: ${port}`);
 });
