@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const { join, resolve } = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
@@ -44,7 +45,10 @@ app.use("/role", rolesRouter);
 app.use("/users", usersRouter);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("./client/build"));
+  app.use(express.static(join(__dirname, "./client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(resolve(__dirname, "./client/build", "index.html"));
+  });
 }
 
 app.listen(port, () => {
