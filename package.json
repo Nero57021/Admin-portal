@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "cd client && yarn run build",
-    "install-client": "cd client && yarn start",
-    "heroku-postbuild":"NPM_CONFIG_PRODCUTION=false yarn --prefix client && yarn build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn build --prefix client",
     "start": "node server.js"
   },
   "repository": "https://github.com/chant17/SE-Team7",
